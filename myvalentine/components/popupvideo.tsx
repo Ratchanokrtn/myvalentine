@@ -1,9 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-import { useState } from 'react';
 
-export default function Popupvideo({onClose}) {
+type PopupVideoProps = {
+  onClose: () => void;
+};
+export default function Popupvideo({onClose} : PopupVideoProps) {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center">
