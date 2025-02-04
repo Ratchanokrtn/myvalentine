@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PhakchiThin';
+  src: url('/font/PhakchiThin-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color1: #ff0000; 
+  --color2: #0000ff; 
+  --color3: #00ff00; 
+  --mixed-color: color-mix(in srgb, var(--color1) 33%, var(--color2) 33%, var(--color3) 34%);
+
+  --background: linear-gradient(to right, #eee6fb, #dafffb, #eae1fd);
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'PhakchiThin', sans-serif;
+}
